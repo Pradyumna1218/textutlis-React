@@ -3,13 +3,12 @@ import "./App.css";
 import Navbar from './components/Navbar'
 import TextForm from './components/TextForm'
 import Alert from './components/Alert';
-// import About from './components/About'
+import About from './components/About'
 
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   const [mode, setMode] = useState('light')
-  const [btn, setBtn] = useState('primary')
   const toggleMode =()=>{
     if(mode === 'light'){
       setMode('dark')
@@ -22,28 +21,7 @@ function App() {
       showAlert("Light mode has been enabled", "success")
     }
   }
-  const toggleRed = ()=>{
-    if(mode === 'light'){
-      setMode('red')
-      document.body.style.backgroundColor = '#8B0000'
-      setBtn('danger')
-    }else{
-      setMode('light')
-      document.body.style.backgroundColor = 'white'
-      setBtn('primary')
-    }
-  }
-  const toggleGreen = ()=>{
-    if(mode === 'light'){
-      setMode('green')
-      document.body.style.backgroundColor = 'green'
-      setBtn('success')
-    }else{
-      setMode('light')
-      document.body.style.backgroundColor = 'white'
-      setBtn('primary')
-    }
-  }
+  
 
   const [alert, setAlert] = useState(null)
   const showAlert = (message, type) => {
@@ -60,19 +38,19 @@ function App() {
     <>
       {/* < Navbar title = "TextUtlis" aboutTitle = "About TextUtlis"/> */}
       {/* < Navbar /> */}
-      {/* <Router> */}
-      < Navbar title = "TextUtlis" mode = {mode} toggleMode = {toggleMode} toggleRed = {toggleRed} toggleGreen = {toggleGreen}/>
+      <Router>
+      < Navbar title = "TextUtlis" mode = {mode} toggleMode = {toggleMode} />
       <Alert alert = {alert}/>
       <div className="container my-3">
-        {/* <Routes>
-            <Route exact path="/about" element = {<About />} />
-            <Route exact path="/" element = {<TextForm heading = "Enter a text to analyze below" mode ={mode}  showAlert={showAlert} btn = {btn}/>}/>
-        </Routes> */}
-        <TextForm heading = "Enter a text to analyze below" mode ={mode}  showAlert={showAlert} btn = {btn}/>
+        <Routes>
+            <Route exact path="/about" element = {<About mode = {mode}/>} />
+            <Route exact path="/" element = {<TextForm heading = "Enter a text to analyze below" mode ={mode}  showAlert={showAlert} />}/>
+        </Routes>
+        {/* <TextForm heading = "Enter a text to analyze below" mode ={mode}  showAlert={showAlert} btn = {btn}/> */}
 
         {/* If exact not used then home/about and home will be same and if about not found it will go to home */}
       </div>
-      {/* </Router> */}
+      </Router>
 
     </>
   );
