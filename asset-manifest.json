@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/textutlis/static/css/main.1cdbf67e.css",
-    "main.js": "/textutlis/static/js/main.9294b121.js",
-    "static/js/488.18153797.chunk.js": "/textutlis/static/js/488.18153797.chunk.js",
-    "index.html": "/textutlis/index.html",
-    "main.1cdbf67e.css.map": "/textutlis/static/css/main.1cdbf67e.css.map",
-    "main.9294b121.js.map": "/textutlis/static/js/main.9294b121.js.map",
-    "488.18153797.chunk.js.map": "/textutlis/static/js/488.18153797.chunk.js.map"
+    "main.css": "/textutlis-React/static/css/main.1cdbf67e.css",
+    "main.js": "/textutlis-React/static/js/main.2c91adbe.js",
+    "static/js/488.18153797.chunk.js": "/textutlis-React/static/js/488.18153797.chunk.js",
+    "index.html": "/textutlis-React/index.html",
+    "main.1cdbf67e.css.map": "/textutlis-React/static/css/main.1cdbf67e.css.map",
+    "main.2c91adbe.js.map": "/textutlis-React/static/js/main.2c91adbe.js.map",
+    "488.18153797.chunk.js.map": "/textutlis-React/static/js/488.18153797.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1cdbf67e.css",
-    "static/js/main.9294b121.js"
+    "static/js/main.2c91adbe.js"
   ]
 }
